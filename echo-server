@@ -1,0 +1,4 @@
+#!/bin/bash -eux
+
+npm run build
+npm run start
