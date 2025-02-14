@@ -30,7 +30,27 @@ By default, the server listens on port `54800`. To specify a custom port:
 npm run start 3000
 ```
 
-### Example Request
+## Add echo-server to `PATH`
+To echo-server script from anywhere, you can add the bin directory to your PATH by modifying your shell's configuration file (.bashrc or .zshrc).
+1. Add the following line at the end of the file:
+ 
+   ```sh
+   export PATH="<path-to-your-repo>/bin:$PATH"
+   ```
+
+   Replace `<path-to-your-repo>` with the full path to the cloned repository.
+2. Apply the changes by running:
+   ```sh
+   source ~/.bashrc  # For Bash
+   source ~/.zshrc   # For Zsh
+   ```
+
+After adding the script to `PATH`, you can start the server by simply running:
+```sh
+echo-server
+```
+
+## Example Request
 Using `curl`:
 
 ```sh
@@ -40,7 +60,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"message": "Hello, Echo Se
 ### Expected Output
 On the server logs, you'll see something like:
 
-```
+```json
 Incoming request:
 Headers: {
   "host": "127.0.0.1:54800",
