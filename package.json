@@ -1,0 +1,16 @@
+{
+  "name": "echo-server",
+  "version": "1.0.0",
+  "description": "Echo Server is a simple TypeScript-based HTTP server that logs incoming request details, including headers, method, path, query parameters, and body content",
+  "scripts": {
+    "build": "tsc src/server.ts --outDir build",
+    "start": "node build/server.js",
+    "clean": "rm -rf ./build"
+  },
+  "author": "Joachim Wedin",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "typescript": "^5.7.3"
+  }
+}
